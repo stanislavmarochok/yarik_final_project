@@ -14,10 +14,9 @@ function App() {
 
       <Router>
         <Routes>
-          <Route exact path="/" component={Home}></Route>
-          
-          <Route path="/addAd" component={AddAd}></Route>
-          
+          <Route path="/" element={<Home />}>
+            <Route path="add-ad" element={<AddAd />}></Route>
+          </Route>
         </Routes>
       </Router>
     </div>

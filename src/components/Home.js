@@ -1,12 +1,14 @@
 import React from "react";
+import Filters from "./Filters";
 
 
 function Home() {
   return (
     <div>
-        <div className="underHeader">
-          home page
-        </div>
+      <Filters />
+      <div className="underHeader">
+        home page
+      </div>
     </div>
   );
 }

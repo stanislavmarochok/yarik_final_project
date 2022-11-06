@@ -1,0 +1,6 @@
+.filters-container {
+    background-color: aqua;
+    width: 80%;
+    height: 200px;
+    cursor: pointer;
+}

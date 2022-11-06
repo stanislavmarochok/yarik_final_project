@@ -14,7 +14,7 @@ export default function NavigationBar () {
       }
     ],
     logo: {
-      text: 'Responsive Navbar React'
+      text: 'buy-house.com'
     },
     style: {
       barStyles: {
