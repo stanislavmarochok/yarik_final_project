@@ -25,16 +25,38 @@ class Filters extends React.Component {
                     className="filters-container-collapse">
                     <div className="filters-container-main">
                         <div className="filters-container-content">
+                            <nav>
+                                <div className='filter_block'>
+                                    <p>Sort by price: </p>
+                                    <input require type="number" className='filter_input' placeholder='min' min={0}/>
+                                    <input require type="number" className='filter_input' placeholder='max' min={0}/>
+                                </div>
 
+                                <div className='filter_block'>
+                                    <p>Select city: </p>
+                                    <select className='filter_select'>
+                                        <option>Dnipro</option>
+                                        <option>Lviv</option>
+                                        <option>Kyiv</option>
+                                        <option>Hmelnick</option>
+                                    </select>
+                                </div>
+                            </nav>
+                            
+                            <button className='filter_button'>GO!</button>
+                        
                         </div>
                     </div>
                 </Collapse>
                 <div 
                     className="filters-container-open-close-button"
                     onClick={this.openCloseFilters}>
+
                         <div 
-                            style={{ transform: `rotate(${this.state.isFilterOpened ? '180deg' : '0deg' })` }}
-                            className="filters-container-open-close-button-arrow"></div>
+                            style={{ transform: `rotate(${this.state.isFilterOpened ? '180deg' : '0deg' })` }} 
+                            className="filters-container-open-close-button-arrow">
+
+                        </div>
                     </div>
             </div>
         );
