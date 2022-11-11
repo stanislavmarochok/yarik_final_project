@@ -14,9 +14,8 @@ function App() {
 
       <Router>
         <Routes>
-          <Route path="/" element={<Home />}>
-            <Route path="add-ad" element={<AddAd />}></Route>
-          </Route>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="add-ad" element={<AddAd />}></Route>
         </Routes>
       </Router>
     </div>

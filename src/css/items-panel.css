@@ -1,0 +1,10 @@
+.items-panel-container {
+    width: 100%;
+    background-color: beige;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+    padding: 1rem;
+    justify-content: space-around;
+    box-sizing: border-box;
+}

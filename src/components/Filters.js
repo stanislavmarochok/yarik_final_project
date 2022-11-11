@@ -29,8 +29,8 @@ class Filters extends React.Component {
                                 <div className='filter_block'>
                                     <p>Sort by price: </p>
                                     <div className='filter_inputs'>
-                                        <input require type="number" className='filter_input' placeholder='min' min={0}/>
-                                        <input require type="number" className='filter_input' placeholder='max' min={0}/>
+                                        <input require="true" type="number" className='filter_input' placeholder='min' min={0}/>
+                                        <input require="true" type="number" className='filter_input' placeholder='max' min={0}/>
                                     </div>
                                 </div>
 

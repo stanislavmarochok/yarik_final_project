@@ -1,0 +1,16 @@
+[
+    {
+      "name" : "huj",
+      "price" : "2000$",
+      "href" : "/sdf",
+      "location" : "london",
+      "photo" : "1.jpg"
+    },
+    {
+      "name" : "huj",
+      "price" : "3000$",
+      "href" : "/sdf",
+      "location" : "london",
+      "photo" : "2.jpg"
+    }
+]

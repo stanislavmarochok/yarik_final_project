@@ -6,7 +6,7 @@ export default function NavigationBar () {
     items: [
       {
         text: 'Home',
-        link: '/home'
+        link: '/'
       },
       {
         text: 'Add ad',
