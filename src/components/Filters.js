@@ -43,9 +43,13 @@ class Filters extends React.Component {
                                         <option>Hmelnick</option>
                                     </select>
                                 </div>
+
+                                <div className='filter_block'>
+                                    <input type="text" placeholder="Search by title"/>
+                                </div>
                             </nav>
                             
-                            <button className='filter_button'>GO!</button>
+                            <button className='filter_button'>GO!<p>AHEAD!</p></button>
                         
                         </div>
                     </div>
