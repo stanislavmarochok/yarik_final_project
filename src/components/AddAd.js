@@ -1,4 +1,5 @@
 import React from "react";
+import "../css/addAd.css";
 import { Formik } from "formik";
 
 class AddAd extends React.Component{
@@ -9,7 +10,7 @@ class AddAd extends React.Component{
     render(){
         return(
             <Formik>
-                <form method="post">
+                <form method="post" className="add-ad-form">
                     <line><p>Name of ad: </p><input className="addAdNameInput" placeholder="name"/></line>
                     <line><p>Price: </p><input className="addAdNameInput" placeholder="price"/></line>
                     <line>
