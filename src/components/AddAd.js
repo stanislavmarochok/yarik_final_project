@@ -1,35 +1,67 @@
 import React from "react";
+import { Formik, useFormik } from "formik";
 import "../css/addAd.css";
-import { Formik } from "formik";
 
-class AddAd extends React.Component{
-    constructor(props){
-        super(props);
-    }
+const AddAd = () => {
+    const formik = useFormik({
+        initialValues: {
+            name: ''
+        },
+        onSubmit: values => {
+            saveItem(values);
+        }
+    });
 
-    render(){
-        return(
-            <Formik>
-                <form method="post" className="add-ad-form">
-                    <line><p>Name of ad: </p><input className="addAdNameInput" placeholder="name"/></line>
-                    <line><p>Price: </p><input className="addAdNameInput" placeholder="price"/></line>
-                    <line>
-                        <p>City: </p>
-                        <select>
-                            <option>Dnipro</option>
-                            <option>Lviv</option>
-                            <option>Odesa</option>
-                            <option>Kiyv</option>
-                        </select>
-                    </line>
-                    <line><p>Choose image: </p><input className="addAdNameInput" placeholder="potom dodelau"/></line>
-                    <line><p>Description: </p><textarea className="addAdNameInput" placeholder="Description"></textarea></line>
-        
-                    <button>DONE</button>
-                </form>
-            </Formik>
-        );
-    }
+    return (
+        <form onSubmit={formik.handleSubmit} className="add-ad-form">
+            <div>
+                <p>Name of ad: </p>
+                <input 
+                    name="name" 
+                    id="name" 
+                    className="addAdNameInput" 
+                    placeholder="name"
+                    onChange={formik.handleChange}
+                    />
+            </div>
+            <div>
+                <p>Price: </p>
+                <input 
+                    name="price"
+                    id="price" 
+                    type="number"
+                    className="addAdNameInput" 
+                    placeholder="price"
+                    onChange={formik.handleChange} />
+            </div>
+            <div>
+                <p>City: </p>
+                <select
+                    name="location" 
+                    id="location"
+                    onChange={formik.handleChange}>
+                    <option>Dnipro</option>
+                    <option>Lviv</option>
+                    <option>Odesa</option>
+                    <option>Kiyv</option>
+                </select>
+            </div>
+            <div>
+                <p>Choose image: </p>
+                <input id="photo" className="addAdNameInput" placeholder="potom dodelau"/>
+            </div>
+            <div>
+                <p>Description: </p>
+                <textarea id="description" className="addAdNameInput" placeholder="Description"></textarea>
+            </div>
+
+            <button>DONE</button>
+        </form>
+    );
+}
+
+function saveItem(item){
+    console.log(JSON.stringify(item));
 }
 
 export default AddAd;

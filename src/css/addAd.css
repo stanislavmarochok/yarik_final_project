@@ -6,7 +6,7 @@
     padding: 1rem;
 }
 
-.add-ad-form line {
+.add-ad-form div {
     font-size: 24px;
     font-weight: 700;
     display: flex;
@@ -16,20 +16,20 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
 
-.add-ad-form line input{
+.add-ad-form div input{
     font-size: 18px;
     padding: 0.5rem;
     width: 40%;
 }
 
-.add-ad-form line textarea{
+.add-ad-form div textarea{
     width: 40%;
     padding: 0.5rem;
     font-size: 18px;
     resize: vertical;
 }
 
-.add-ad-form line select{
+.add-ad-form div select{
     width: 42%;
     padding: 0.5rem;
     font-size: 18px;

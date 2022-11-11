@@ -29,14 +29,15 @@ class Filters extends React.Component {
                                 <div className='filter_block'>
                                     <p>Sort by price: </p>
                                     <div className='filter_inputs'>
-                                        <input require="true" type="number" className='filter_input' placeholder='min' min={0}/>
-                                        <input require="true" type="number" className='filter_input' placeholder='max' min={0}/>
+                                        <input require="true" type="number" className='filter_input' id="priceMin" placeholder='min' min={0}/>
+                                        <input require="true" type="number" className='filter_input' id="priceMax" placeholder='max' min={0}/>
                                     </div>
                                 </div>
 
                                 <div className='filter_block'>
                                     <p>Select city: </p>
-                                    <select className='filter_select'>
+                                    <select className='filter_select' id="location">
+                                        <option></option>
                                         <option>Dnipro</option>
                                         <option>Lviv</option>
                                         <option>Kyiv</option>
@@ -45,11 +46,14 @@ class Filters extends React.Component {
                                 </div>
 
                                 <div className='filter_block'>
-                                    <input type="text" placeholder="Search by title"/>
+                                    <input 
+                                        type="text"
+                                        id="title" 
+                                        placeholder="Search by title"/>
                                 </div>
                             </nav>
                             
-                            <button className='filter_button'>GO!<p>AHEAD!</p></button>
+                            <button onClick={this.applyFilters} className='filter_button'>GO!<p>AHEAD!</p></button>
                         
                         </div>
                     </div>
@@ -66,6 +70,17 @@ class Filters extends React.Component {
                     </div>
             </div>
         );
+    }
+
+    applyFilters = () => {
+        let filters = {
+            priceMin: document.getElementById('priceMin').value,
+            priceMax: document.getElementById('priceMax').value,
+            location: document.getElementById('location').value,
+            title: document.getElementById('title').value
+        };
+
+        this.props.applyFilters(filters);
     }
 }
 

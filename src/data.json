@@ -1,16 +1,16 @@
 [
     {
-      "name" : "huj",
-      "price" : "2000$",
+      "title" : "A house in Dnipro",
+      "price" : 2000,
       "href" : "/sdf",
-      "location" : "london",
+      "location" : "Dnipro",
       "photo" : "1.jpg"
     },
     {
-      "name" : "huj",
-      "price" : "3000$",
+      "title" : "Amazing flat in Kiev",
+      "price" : 3000,
       "href" : "/sdf",
-      "location" : "london",
+      "location" : "Kiev",
       "photo" : "2.jpg"
     }
 ]
